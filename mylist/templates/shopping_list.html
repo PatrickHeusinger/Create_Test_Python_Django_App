@@ -52,16 +52,30 @@
         <h1>
             Shopping List
         </h1>
-        <button>
+        <button onclick="addItem()">
             +
         </button>
     </header>
+    {% for row in all_items %}
     <div class="list-item">
-        <input type="checkbox"> Fruits
+        <input type="checkbox"> {{ row.name }}
     </div>
-    <div class="list-item">
-        <input type="checkbox"> Booze
-    </div>
+    {% endfor %}
+
+    <script>
+        function addItem() {
+            let itemName = prompt('Add item :')
+            let token = '{{ csrf_token }}';
+            let formData = new FormData();
+            formData.append('itemName', itemName);
+            formData.append('csrfmiddlewaretoken', token);
+            fetch('/mylist/', {
+                method: 'POST',
+                body: formData
+            });
+            window.location.reload();
+        }
+    </script>
 </body>
 
 </html>
