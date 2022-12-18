@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather+Sans&display=swap" rel="stylesheet">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: 'Merriweather Sans', sans-serif;
+            margin: 0;
+            background-color: beige;
+        }
+        
+        .header {
+            display: flex;
+            background-color: teal;
+            color: beige;
+            padding-left: 20px;
+        }
+        
+        button {
+            height: 40px;
+            width: 40px;
+            border: unset;
+            border-radius: 50%;
+            position: absolute;
+            right: 20px;
+            bottom: 20px;
+            background-color: teal;
+            color: beige;
+            font-size: 20px;
+        }
+        
+        .list-item {
+            background-color: aliceblue;
+            height: 60px;
+            padding-left: 20px;
+            display: flex;
+            align-items: center;
+            border-bottom: 1px solid rgb(225, 215, 215);
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header">
+        <h1>
+            Shopping List
+        </h1>
+        <button>
+            +
+        </button>
+    </header>
+    <div class="list-item">
+        <input type="checkbox"> Fruits
+    </div>
+    <div class="list-item">
+        <input type="checkbox"> Booze
+    </div>
+</body>
+
+</html>
